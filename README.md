@@ -14,7 +14,11 @@ Agentic Self-RAG with complete evaluation, baselines, statistical testing, and s
 
 <h1 align="center">Proposed Architecture</h1>
 
-## 🚀 Quick Start (2 min setup)
+## 📚 Documentation
+
+- **[Research Paper](scripts/Research_Paper.pdf)**
+
+## 🚀 Quick Start
 
 ### Automated Setup (Recommended)
 ```bash
