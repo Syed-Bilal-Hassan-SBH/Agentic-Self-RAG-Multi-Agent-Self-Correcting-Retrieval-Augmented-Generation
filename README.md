@@ -434,11 +434,11 @@ print('✓ Reproducibility verified')
 ## 📚 Citation
 
 ```bibtex
-@inproceedings{hassan2025agentic,
+@inproceedings{hassan2026agentic,
   title={Agentic Self-RAG: Multi-Agent Reasoning for Self-Correcting Retrieval-Augmented Generation},
   author={Hassan, Syed Bilal and Abdullah and Abbas, Mohsin},
-  booktitle={EMNLP 2025},
-  year={2025}
+  booktitle={EMNLP 2026},
+  year={2026}
 }
 ```
 
