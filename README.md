@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)]()
 
-**Publication-Ready Implementation** of Agentic Self-RAG with complete evaluation, baselines, statistical testing, and streaming batch evaluation capabilities.
+Agentic Self-RAG with complete evaluation, baselines, statistical testing, and streaming batch evaluation capabilities.
 
 ---
 
