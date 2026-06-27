@@ -16,7 +16,7 @@ Agentic Self-RAG with complete evaluation, baselines, statistical testing, and s
 
 ## 📚 Documentation
 
-- **[Research Paper](scripts/Research_Paper.pdf)**
+- **[Research Paper](./Research_Paper.pdf)**
 
 ## 🚀 Quick Start
 
