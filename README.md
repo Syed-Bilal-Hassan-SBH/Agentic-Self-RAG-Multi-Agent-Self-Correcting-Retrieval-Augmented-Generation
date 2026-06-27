@@ -447,16 +447,10 @@ print('✓ Reproducibility verified')
 ## 📧 Contact
 
 For questions or issues:
-- Email: i220505@nu.edu.pk
-- GitHub Issues: [Open an issue](https://github.com/your-repo/issues)
+- Email: syedbilal8803@gmail.com
 
 ---
 
-## 📄 License
-
-MIT License - see LICENSE file for details.
-
----
 
 ## 🙏 Acknowledgments
 
