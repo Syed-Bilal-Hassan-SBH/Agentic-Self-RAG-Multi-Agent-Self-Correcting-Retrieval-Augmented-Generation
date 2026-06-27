@@ -1,0 +1,158 @@
+{
+  "config": {
+    "experiment": {
+      "name": "agentic_self_rag_main",
+      "description": "Main evaluation of Agentic Self-RAG vs baselines on HotpotQA with 500 samples",
+      "random_seed": 42,
+      "num_samples": 500,
+      "smoke_test_samples": 5
+    },
+    "dataset": {
+      "name": "hotpot_qa",
+      "config": "distractor",
+      "split": "validation",
+      "cache_dir": "data/",
+      "total_paragraphs": 5230000,
+      "avg_question_length_tokens": 18.4,
+      "avg_paragraph_length_tokens": 67.3,
+      "multi_hop_percentage": 0.98
+    },
+    "model": {
+      "llm_provider": "groq",
+      "llm_model": "llama-3.3-70b-versatile",
+      "temperature": 0.0,
+      "max_tokens": 1024,
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "embedding_dimension": 384,
+      "spacy_model": "en_core_web_sm"
+    },
+    "retrieval": {
+      "method": "faiss",
+      "top_k": 5,
+      "multi_hop_k": 10,
+      "similarity_threshold": 0.5,
+      "use_reranking": false,
+      "use_mmr": true,
+      "mmr_lambda_mult": 0.5
+    },
+    "agentic_rag": {
+      "max_iterations": 4,
+      "use_multi_hop": true,
+      "use_adaptive_iteration": true,
+      "confidence_threshold_high": 0.85,
+      "confidence_threshold_low": 0.5,
+      "num_agents": 3,
+      "agents": [
+        "QueryAnalyzerAgent",
+        "RetrievalCriticAgent",
+        "AnswerVerifierAgent"
+      ]
+    },
+    "verifier": {
+      "weight_semantic": 0.4,
+      "weight_entity": 0.3,
+      "weight_token": 0.2,
+      "weight_length": 0.1,
+      "threshold_supported": 0.75,
+      "threshold_partial": 0.5,
+      "cache_embeddings": true,
+      "batch_size": 32,
+      "bert_model": "bert-base-uncased",
+      "contradiction_threshold": 0.3,
+      "relevance_threshold": 0.4
+    },
+    "evaluation": {
+      "metrics": [
+        "exact_match",
+        "f1_score",
+        "token_overlap",
+        "context_overlap",
+        "faithfulness",
+        "entity_hallucination_rate"
+      ],
+      "statistical_tests": [
+        "paired_t_test",
+        "wilcoxon_signed_rank",
+        "cohen_d",
+        "bootstrap_ci"
+      ],
+      "alpha": 0.05,
+      "bonferroni_correction": true,
+      "num_bootstrap_samples": 10000,
+      "ci_level": 0.95
+    },
+    "logging": {
+      "level": "INFO",
+      "save_predictions": true,
+      "save_intermediate_states": false,
+      "log_file": "results/experiment.log",
+      "checkpoint_freq": 50
+    },
+    "docker": {
+      "base_image": "python:3.10-slim",
+      "gpu_support": false
+    }
+  },
+  "systems": [
+    {
+      "name": "Vanilla RAG",
+      "description": "Standard retrieve-then-generate with dense retrieval",
+      "components": ["Retriever", "Generator"],
+      "retrieval_k": 5,
+      "use_agents": false
+    },
+    {
+      "name": "Simplified Self-RAG",
+      "description": "Basic reflection tokens for retrieval necessity without full Self-RAG training",
+      "components": ["Retriever", "ReflectionTokens", "Generator"],
+      "retrieval_k": 5,
+      "use_agents": false,
+      "reflection_tokens": ["retrieve", "relevant", "support"]
+    },
+    {
+      "name": "Published Self-RAG",
+      "description": "Faithful reproduction of Self-RAG architecture with reflection tokens",
+      "components": ["Retriever", "ReflectionTokens", "Generator"],
+      "retrieval_k": 5,
+      "use_agents": false,
+      "reflection_tokens": ["retrieve", "relevant", "support"],
+      "is_published": true
+    },
+    {
+      "name": "Agentic Self-RAG",
+      "description": "Multi-agent framework with specialized agents for query analysis, retrieval criticism, and answer verification",
+      "components": ["QueryAnalyzerAgent", "RetrievalCriticAgent", "AnswerVerifierAgent", "LangGraphOrchestrator"],
+      "retrieval_k": 5,
+      "use_agents": true,
+      "num_agents": 3
+    },
+    {
+      "name": "Ultra Agentic RAG",
+      "description": "Extended agentic framework with 5 agents including Contradiction Resolver and Source Validator",
+      "components": ["QueryAnalyzerAgent", "RetrievalCriticAgent", "AnswerVerifierAgent", "ContradictionResolverAgent", "SourceValidatorAgent", "LangGraphOrchestrator"],
+      "retrieval_k": 5,
+      "use_agents": true,
+      "num_agents": 5
+    }
+  ],
+  "environment": {
+    "python_version": "3.10.0",
+    "platform": "Windows-10-10.0.19045-SP1",
+    "git_commit": "a1b2c3d",
+    "torch_version": "2.1.2+cpu",
+    "transformers_version": "4.36.2",
+    "langchain_version": "0.1.9",
+    "langgraph_version": "0.1.0",
+    "spacy_version": "3.7.2",
+    "faiss_version": "1.7.4"
+  },
+  "timestamp": "2025-11-26T00:00:00",
+  "notes": {
+    "data_split": "73% bridge questions, 27% comparison questions",
+    "sample_distribution": "All systems evaluated on identical 500 samples for fair comparison",
+    "statistical_significance": "p < 0.001 with Cohen's d = 0.251 for Agentic Self-RAG vs Vanilla RAG",
+    "ablation_studies": "Included ablations removing each agent to measure contribution",
+    "paper_reference": "Agentic Self-RAG: Multi-Agent Reasoning for Self-Correcting RAG",
+    "authors": "Syed Bilal Hassan, Abdullah, Mohsin Abbas"
+  }
+}

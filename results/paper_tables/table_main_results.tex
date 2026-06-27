@@ -1,0 +1,17 @@
+
+\begin{table*}[h]
+\centering
+\caption{Main Results on HotpotQA (500 Samples)}
+\label{tab:main_results}
+\begin{tabular}{lcccccc}
+\toprule
+System & EM (\%) & F1 & Time (s) & Context Overlap & Faithfulness & Entity Halluc. Rate \\
+\midrule
+Vanilla RAG & 43.6 & 0.559 & 2.35 & 0.672 & 0.711 & 0.230 \\
+Simplified Self-RAG & 47.6 & 0.585 & 3.13 & 0.710 & 0.738 & 0.190 \\
+Published Self-RAG & 51.4 & 0.603 & 3.86 & 0.738 & 0.777 & 0.150 \\
+Agentic Self-RAG & 52.6 & 0.616 & 4.22 & 0.778 & 0.821 & 0.110 \\
+Ultra Agentic RAG & 53.2 & 0.616 & 5.85 & 0.790 & 0.830 & 0.101 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,217 @@
+{
+  "Vanilla RAG": {
+    "system_name": "Vanilla RAG",
+    "overall_metrics": {
+      "EM": 0.436,
+      "F1": 0.5594189772878966,
+      "EM_std": 0.4958870839213299,
+      "F1_std": 0.38974011895361227,
+      "num_samples": 500
+    },
+    "by_type_metrics": {
+      "bridge": {
+        "EM": 0.4191780821917808,
+        "F1": 0.5503806592930401,
+        "num_samples": 365
+      },
+      "comparison": {
+        "EM": 0.48148148148148145,
+        "F1": 0.5838559111258421,
+        "num_samples": 135
+      }
+    },
+    "hallucination_metrics": {
+      "avg_context_overlap": 0.6719413230315437,
+      "avg_faithfulness": 0.7111424895252867,
+      "avg_entity_hallucination_rate": 0.2304925352865017,
+      "low_overlap_rate": 0.0,
+      "low_faithfulness_rate": 0.0
+    },
+    "refusal_metrics": {
+      "refusal_rate": 0.198,
+      "answer_rate": 1.0,
+      "num_refusals": 99,
+      "num_answered": 500
+    },
+    "length_metrics": {
+      "avg_pred_length": 1.634,
+      "avg_ref_length": 1.702,
+      "length_ratio": 1.0733333333333333,
+      "overly_long_rate": 0.05
+    },
+    "avg_time": 2.3466196975100355,
+    "num_errors": 0
+  },
+  "Simplified Self-RAG": {
+    "system_name": "Simplified Self-RAG",
+    "overall_metrics": {
+      "EM": 0.476,
+      "F1": 0.5847943539590787,
+      "EM_std": 0.4994236678412428,
+      "F1_std": 0.3978553764092248,
+      "num_samples": 500
+    },
+    "by_type_metrics": {
+      "bridge": {
+        "EM": 0.4602739726027397,
+        "F1": 0.5743623062505294,
+        "num_samples": 365
+      },
+      "comparison": {
+        "EM": 0.5185185185185185,
+        "F1": 0.6129995199858979,
+        "num_samples": 135
+      }
+    },
+    "hallucination_metrics": {
+      "avg_context_overlap": 0.709548385781819,
+      "avg_faithfulness": 0.738362199096146,
+      "avg_entity_hallucination_rate": 0.1901091864302373,
+      "low_overlap_rate": 0.0,
+      "low_faithfulness_rate": 0.0
+    },
+    "refusal_metrics": {
+      "refusal_rate": 0.226,
+      "answer_rate": 1.0,
+      "num_refusals": 113,
+      "num_answered": 500
+    },
+    "length_metrics": {
+      "avg_pred_length": 1.646,
+      "avg_ref_length": 1.702,
+      "length_ratio": 1.0653333333333335,
+      "overly_long_rate": 0.05
+    },
+    "avg_time": 3.1302830586297734,
+    "num_errors": 0
+  },
+  "Published Self-RAG": {
+    "system_name": "Published Self-RAG",
+    "overall_metrics": {
+      "EM": 0.514,
+      "F1": 0.6033891007691673,
+      "EM_std": 0.4998039615689336,
+      "F1_std": 0.4099413396503101,
+      "num_samples": 500
+    },
+    "by_type_metrics": {
+      "bridge": {
+        "EM": 0.4986301369863014,
+        "F1": 0.5924469988259775,
+        "num_samples": 365
+      },
+      "comparison": {
+        "EM": 0.5555555555555556,
+        "F1": 0.6329733023192726,
+        "num_samples": 135
+      }
+    },
+    "hallucination_metrics": {
+      "avg_context_overlap": 0.7378005051263147,
+      "avg_faithfulness": 0.7768718175949468,
+      "avg_entity_hallucination_rate": 0.14967403154996925,
+      "low_overlap_rate": 0.0,
+      "low_faithfulness_rate": 0.0
+    },
+    "refusal_metrics": {
+      "refusal_rate": 0.19,
+      "answer_rate": 1.0,
+      "num_refusals": 95,
+      "num_answered": 500
+    },
+    "length_metrics": {
+      "avg_pred_length": 1.652,
+      "avg_ref_length": 1.702,
+      "length_ratio": 1.0716666666666665,
+      "overly_long_rate": 0.056
+    },
+    "avg_time": 3.8569929891683055,
+    "num_errors": 0
+  },
+  "Agentic Self-RAG": {
+    "system_name": "Agentic Self-RAG",
+    "overall_metrics": {
+      "EM": 0.526,
+      "F1": 0.615754161761297,
+      "EM_std": 0.4993235424051224,
+      "F1_std": 0.40661019521624064,
+      "num_samples": 500
+    },
+    "by_type_metrics": {
+      "bridge": {
+        "EM": 0.5095890410958904,
+        "F1": 0.6043812434965679,
+        "num_samples": 365
+      },
+      "comparison": {
+        "EM": 0.5703703703703704,
+        "F1": 0.6465031629955647,
+        "num_samples": 135
+      }
+    },
+    "hallucination_metrics": {
+      "avg_context_overlap": 0.7780851905841824,
+      "avg_faithfulness": 0.8205013247524325,
+      "avg_entity_hallucination_rate": 0.11002405162606335,
+      "low_overlap_rate": 0.0,
+      "low_faithfulness_rate": 0.0
+    },
+    "refusal_metrics": {
+      "refusal_rate": 0.19,
+      "answer_rate": 1.0,
+      "num_refusals": 95,
+      "num_answered": 500
+    },
+    "length_metrics": {
+      "avg_pred_length": 1.654,
+      "avg_ref_length": 1.702,
+      "length_ratio": 1.055,
+      "overly_long_rate": 0.036
+    },
+    "avg_time": 4.221296290631033,
+    "num_errors": 0
+  },
+  "Ultra Agentic RAG": {
+    "system_name": "Ultra Agentic RAG",
+    "overall_metrics": {
+      "EM": 0.532,
+      "F1": 0.6164491975009685,
+      "EM_std": 0.49897494927100305,
+      "F1_std": 0.4109863430175259,
+      "num_samples": 500
+    },
+    "by_type_metrics": {
+      "bridge": {
+        "EM": 0.5150684931506849,
+        "F1": 0.6068840062462547,
+        "num_samples": 365
+      },
+      "comparison": {
+        "EM": 0.5777777777777777,
+        "F1": 0.6423106405229726,
+        "num_samples": 135
+      }
+    },
+    "hallucination_metrics": {
+      "avg_context_overlap": 0.7900208821980816,
+      "avg_faithfulness": 0.8296996443507377,
+      "avg_entity_hallucination_rate": 0.10061940509137263,
+      "low_overlap_rate": 0.0,
+      "low_faithfulness_rate": 0.0
+    },
+    "refusal_metrics": {
+      "refusal_rate": 0.188,
+      "answer_rate": 1.0,
+      "num_refusals": 94,
+      "num_answered": 500
+    },
+    "length_metrics": {
+      "avg_pred_length": 1.624,
+      "avg_ref_length": 1.702,
+      "length_ratio": 1.0256666666666667,
+      "overly_long_rate": 0.026
+    },
+    "avg_time": 5.846514396206081,
+    "num_errors": 0
+  }
+}

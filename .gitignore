@@ -1,0 +1,40 @@
+# Environment variables (API keys)
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Large dataset files (users can download via script)
+data/hotpotqa_cache.json
+data/hotpotqa_*.json
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# Jupyter checkpoints
+*.ipynb_checkpoints
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Build artifacts
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,68 @@
+SYSTEM COMPARISON REPORT
+========================
+
+EXECUTIVE SUMMARY
+=================
+
+Five RAG systems were evaluated on 500 HotpotQA samples each:
+
+System Ranking by Exact Match (EM):
+  1. Ultra Agentic RAG:      53.2%  [Best overall]
+  2. Agentic Self-RAG:       52.6%  [Best practical choice]
+  3. Published Self-RAG:     51.4%  [Previous SOTA]
+  4. Simplified Self-RAG:    47.6%  [Reduced complexity]
+  5. Vanilla RAG (Baseline): 43.6%  [Baseline]
+
+DETAILED COMPARISONS
+====================
+
+
+Vanilla RAG vs Simplified Self-RAG
+--------------------------------------------------
+  EM: 0.436 -> 0.476 (+0.040)
+  F1: 0.559 -> 0.585 (+0.025)
+
+Vanilla RAG vs Published Self-RAG
+--------------------------------------------------
+  EM: 0.436 -> 0.514 (+0.078)
+  F1: 0.559 -> 0.603 (+0.044)
+
+Vanilla RAG vs Agentic Self-RAG
+--------------------------------------------------
+  EM: 0.436 -> 0.526 (+0.090)
+  F1: 0.559 -> 0.616 (+0.056)
+
+Vanilla RAG vs Ultra Agentic RAG
+--------------------------------------------------
+  EM: 0.436 -> 0.532 (+0.096)
+  F1: 0.559 -> 0.616 (+0.057)
+
+Simplified Self-RAG vs Published Self-RAG
+--------------------------------------------------
+  EM: 0.476 -> 0.514 (+0.038)
+  F1: 0.585 -> 0.603 (+0.019)
+
+Simplified Self-RAG vs Agentic Self-RAG
+--------------------------------------------------
+  EM: 0.476 -> 0.526 (+0.050)
+  F1: 0.585 -> 0.616 (+0.031)
+
+Simplified Self-RAG vs Ultra Agentic RAG
+--------------------------------------------------
+  EM: 0.476 -> 0.532 (+0.056)
+  F1: 0.585 -> 0.616 (+0.032)
+
+Published Self-RAG vs Agentic Self-RAG
+--------------------------------------------------
+  EM: 0.514 -> 0.526 (+0.012)
+  F1: 0.603 -> 0.616 (+0.012)
+
+Published Self-RAG vs Ultra Agentic RAG
+--------------------------------------------------
+  EM: 0.514 -> 0.532 (+0.018)
+  F1: 0.603 -> 0.616 (+0.013)
+
+Agentic Self-RAG vs Ultra Agentic RAG
+--------------------------------------------------
+  EM: 0.526 -> 0.532 (+0.006)
+  F1: 0.616 -> 0.616 (+0.001)
