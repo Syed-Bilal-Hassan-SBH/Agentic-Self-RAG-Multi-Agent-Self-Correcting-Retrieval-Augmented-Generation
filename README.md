@@ -12,7 +12,7 @@
 
 <p align="center"> <img src="./architecture.png" width="100%" alt="Syed Bilal Hassan Banner"> </p>
 
-<h1 align="center">Syed Bilal Hassan</h1>
+<h1 align="center">Proposed Architecture</h1>
 
 ## 🚀 Quick Start (2 min setup)
 
